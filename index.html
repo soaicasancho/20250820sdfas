@@ -706,7 +706,7 @@
     // DÁN ĐỐI TƯỢNG firebaseConfig CỦA BẠN VÀO ĐÂY
     // HÃY CHẮC CHẮN BẠN SAO CHÉP ĐẦY ĐỦ, KHÔNG THIẾU DẤU PHẨY HAY DẤU NGOẶC NÀO
     // ========================================================================
-      const firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyCLNt1MwXp8NKNwc2fsMonAkXpUarjITzI",
     authDomain: "video60-ramen-sync.firebaseapp.com",
     databaseURL: "https://video60-ramen-sync-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -714,15 +714,11 @@
     storageBucket: "video60-ramen-sync.firebasestorage.app",
     messagingSenderId: "439588888908",
     appId: "1:439588888908:web:2ec5f041ed3e07fdbd6fe9"
+  };
 
     // Khởi tạo Firebase
-    try {
-        if (!firebase.apps.length) {
-          firebase.initializeApp(firebaseConfig);
-        }
-    } catch(e) {
-        console.error("Lỗi khởi tạo Firebase. Vui lòng kiểm tra lại `firebaseConfig`.", e);
-        alert("Lỗi kết nối đến máy chủ đồng bộ. Vui lòng thử lại sau.");
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
     }
     const database = firebase.database();
     // ========================================================================
